@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombreProducto": "Funda Uso Rudo Shockproof",
+    "categoria": "Uso Rudo",
+    "precio": 250,
+    "stock": 15,
+    "modeloCompatible": "iPhone 13"
+  },
+  {
+    "id": 2,
+    "nombreProducto": "Funda de Silicón Suave Matte",
+    "categoria": "Silicón",
+    "precio": 180,
+    "stock": 20,
+    "modeloCompatible": "Samsung S23"
+  },
+  {
+    "id": 3,
+    "nombreProducto": "Funda Transparente MagSafe",
+    "categoria": "Transparente",
+    "precio": 300,
+    "stock": 8,
+    "modeloCompatible": "iPhone 16 Pro"
+  },
+  {
+    "id": 4,
+    "nombreProducto": "Funda de Cuero Premium",
+    "categoria": "Elegante",
+    "precio": 450,
+    "stock": 5,
+    "modeloCompatible": "Xiaomi 13"
+  },
+  {
+    "id": 5,
+    "nombreProducto": "Funda con Soporte de Anillo",
+    "categoria": "Accesorios",
+    "precio": 210,
+    "stock": 12,
+    "modeloCompatible": "Motorola G54"
+  }
+]
