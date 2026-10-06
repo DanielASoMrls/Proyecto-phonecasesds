@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhonecaSeSDS - Hacer pedido</title>
+</head>
+<body>
+
+  <h1>Hacer un pedido</h1>
+
+  <form action="procesar-pedido.php" method="post">
+
+    <fieldset>
+      <legend>Datos del solicitante</legend>
+
+      <p>
+        <label for="nombre_completo">Nombre completo:</label>
+        <input type="text" id="nombre_completo" name="nombre_completo" required>
+      </p>
+
+      <p>
+        <label for="correo_electronico">Correo electrónico:</label>
+        <input type="email" id="correo_electronico" name="correo_electronico" required>
+      </p>
+
+      <p>
+        <label for="telefono_contacto">Teléfono (10 dígitos):</label>
+        <input type="tel" id="telefono_contacto" name="telefono_contacto"
+               pattern="[0-9]{10}" required>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos del pedido</legend>
+
+      <p>
+        <label for="categoria_funda">Categoría de funda:</label>
+        <select id="categoria_funda" name="categoria_funda" required>
+          <option value="">Selecciona una opción</option>
+          <option value="uso_rudo">Uso Rudo</option>
+          <option value="silicon">Silicón</option>
+          <option value="transparente">Transparente</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="cantidad_fundas">Cantidad de fundas:</label>
+        <input type="number" id="cantidad_fundas" name="cantidad_fundas"
+               min="1" max="10" value="1" required>
+      </p>
+
+      <p>
+        <label for="fecha_entrega_deseada">Fecha de entrega deseada:</label>
+        <input type="date" id="fecha_entrega_deseada" name="fecha_entrega_deseada">
+      </p>
+
+      <p>
+        <label for="comentarios_pedido">Comentarios:</label><br>
+        <textarea id="comentarios_pedido" name="comentarios_pedido"
+                  rows="4" cols="40" maxlength="300"></textarea>
+      </p>
+    </fieldset>
+
+    <button type="submit">Enviar pedido</button>
+
+  </form>
+
+</body>
+</html>

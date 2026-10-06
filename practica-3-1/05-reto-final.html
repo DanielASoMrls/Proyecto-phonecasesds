@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funda Uso Rudo Shockproof - PhonecaSeSDS</title>
+</head>
+<body>
+
+  <header>
+    <h1>PhonecaSeSDS</h1>
+    <nav aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="fundas.php">Catálogo</a></li>
+        <li aria-current="page">Funda Uso Rudo Shockproof</li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <section id="ficha-funda-uso-rudo">
+      <h2>Funda Uso Rudo Shockproof</h2>
+
+      <figure>
+        <a href="img/funda-uso-rudo.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="img/funda-uso-rudo.jpg"
+               alt="Funda negra de uso rudo para celular con esquinas reforzadas"
+               width="300">
+        </a>
+        <figcaption>Haz clic en la imagen para verla completa.</figcaption>
+      </figure>
+
+      <table>
+        <caption>Datos de la funda</caption>
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Modelo compatible</th>
+            <th>Precio</th>
+            <th>Existencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Uso Rudo</td>
+            <td>Modelo de ejemplo</td>
+            <td>$250.00</td>
+            <td>15 piezas</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <aside>
+    <h2>Pedir esta funda</h2>
+    <form action="procesar-pedido.php" method="post">
+      <fieldset>
+        <legend>Datos del pedido</legend>
+
+        <label for="correo_electronico">Correo electrónico:</label>
+        <input type="email" id="correo_electronico" name="correo_electronico" required>
+        <br>
+
+        <label for="cantidad_fundas">Cantidad:</label>
+        <input type="number" id="cantidad_fundas" name="cantidad_fundas"
+               min="1" max="10" value="1" required>
+      </fieldset>
+
+      <button type="submit">Pedir</button>
+    </form>
+  </aside>
+
+  <footer>
+    <p>Daniela Solís Morales</p>
+  </footer>
+
+</body>
+</html>

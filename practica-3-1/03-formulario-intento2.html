@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - PhonecaSeSDS</title>
+</head>
+<body>
+
+  <h1>Contáctanos</h1>
+
+  <form action="enviar-consulta.php" method="post">
+
+    <fieldset>
+      <legend>Datos del solicitante</legend>
+
+      <label for="nombre_completo">Nombre completo:</label>
+      <input type="text" id="nombre_completo" name="nombre_completo" required>
+      <br>
+
+      <label for="correo_electronico">Correo electrónico:</label>
+      <input type="email" id="correo_electronico" name="correo_electronico" required>
+      <br>
+
+      <label for="telefono_contacto">Teléfono (10 dígitos):</label>
+      <input type="tel" id="telefono_contacto" name="telefono_contacto" pattern="[0-9]{10}">
+    </fieldset>
+
+    <fieldset>
+      <legend>Tu consulta</legend>
+
+      <label for="motivo_consulta">Motivo:</label>
+      <select id="motivo_consulta" name="motivo_consulta" required>
+        <option value="">Selecciona uno</option>
+        <option value="pregunta_funda">Pregunta sobre una funda</option>
+        <option value="seguimiento_pedido">Seguimiento de pedido</option>
+        <option value="otro">Otro</option>
+      </select>
+      <br>
+
+      <label for="mensaje_consulta">Mensaje:</label><br>
+      <textarea id="mensaje_consulta" name="mensaje_consulta" maxlength="300" required></textarea>
+      <br>
+
+      <label for="acepta_respuesta">Acepto que me respondan:</label>
+      <input type="checkbox" id="acepta_respuesta" name="acepta_respuesta" required>
+    </fieldset>
+
+    <button type="submit">Enviar consulta</button>
+
+  </form>
+
+</body>
+</html>
