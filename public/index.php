@@ -20,7 +20,7 @@
         <main>
             
             <section>
-                <h2>Fundas más vendidas</h2>
+                <h2>Fundas en tendencia</h2>
                 <p>Encuentra las mejores fundas para tu celular en PhonecaSeSDS</p>
             </section>
         </main>

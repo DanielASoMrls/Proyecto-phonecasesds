@@ -26,8 +26,7 @@
                     <div class="tarjeta-producto-info">
                         <h3>Funda Uso Rudo Shockproof</h3>
                         <p class="etiqueta-categoria">Categoría: Uso Rudo</p>
-                        <p class="texto-secundario">Texto secundario o de detalle de producto</p>
-                        <p class="tarjeta-producto-precio">Precio: $250.00</p>
+                        <p class="tarjeta-producto-precio">$250.00</p>
                         <a class="enlace-detalle" href="funda-detalle.php?id=1">Ver detalle</a>
                     </div>
                 </article>
@@ -37,8 +36,7 @@
                     <div class="tarjeta-producto-info">
                         <h3>Funda de Silicón Suave Matte</h3>
                         <p class="etiqueta-categoria">Categoría: Silicón</p>
-                        <p class="texto-secundario">Texto secundario o de detalle de producto</p>
-                        <p class="tarjeta-producto-precio">Precio: $180.00</p>
+                        <p class="tarjeta-producto-precio">$180.00</p>
                         <a class="enlace-detalle" href="funda-detalle.php?id=2">Ver detalle</a>
                     </div>
                 </article>
@@ -48,8 +46,7 @@
                     <div class="tarjeta-producto-info">
                         <h3>Funda Transparente MagSafe</h3>
                         <p class="etiqueta-categoria">Categoría: Transsparente</p>
-                        <p class="texto-secundario">Texto secundario o de detalle de producto</p>
-                        <p class="tarjeta-producto-precio">Precio: $300.00</p>
+                        <p class="tarjeta-producto-precio">$300.00</p>
                         <a class="enlace-detalle" href="funda-detalle.php?id=3">Ver detalle</a>
                     </div>
                 </article>

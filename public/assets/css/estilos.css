@@ -44,11 +44,13 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
 nav a:hover {
-    color: var(--color-acento);
-    text-decoration: underline;
+    background-color: var(--color-acento);
+    color: white;
 }
 
 
@@ -61,18 +63,18 @@ nav a:hover {
 article {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 12px;
     border: 1px solid #e8def5;
     margin: 8px;
     background-color: white;
-    border-radius: 6px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(108, 74, 182, 0.08);
 }
 
 article img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 240px;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -80,7 +82,7 @@ article img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
+    gap: 4px;
 }
 
 .etiqueta-categoria{
@@ -96,18 +98,22 @@ article img {
 
 .enlace-detalle{
     display: inline-block;
-    margin-top: auto;
-    color: var(--color-acento);
+    margin-top: 8px;
+    padding: 8px 14px;
+    background-color: var(--color-acento);
+    color: white;
     font-weight: bold;
     text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .enlace-detalle:hover{
-    text-decoration: underline;
+    background-color: var(--color-primario);
 }
 
 .tarjeta-producto-precio{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-primario);
 }
@@ -139,5 +145,39 @@ h1{
 
 h2{
     font-size: 1.5rem;
-    margin: 0 0 8px 0;
+    margin: 24px 0 8px 0;
 }
+
+/* Análisis:
+   rem permite que los tamaños de texto se adapten a la configuración
+   de tamaño de letra del navegador del usuario, favoreciendo la accesibilidad.
+*/
+
+h3{
+    font-size: 1.25rem;
+    margin: 12px 0 6px 0;
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+footer{
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+}
+
+footer p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Componentes que construí esta sesión:
+   - Header y navegación
+   - Tarjetas de productos
+   - Etiquetas de categoría
+   - Precios
+   - Botón para agregar funda
+   - Tipografía y jerarquía visual
+*/
