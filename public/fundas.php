@@ -3,40 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <title>PhonecaSeSDS - Fundas</title>
+        <link rel="stylesheet" href="assets/css/estilos.css">
     </head>
     <body>
         <header>
             <h1>Fundas</h1>
             <nav>
-                <a href="index.php">Inicio</a>
-                <a href="fundas.php">Catálogo</a>
-                <a href="contacto.php">Contacto</a>
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="fundas.php">Catálogo</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                </ul>
             </nav>
         </header>
 
         <main>
             <h2>Catálogo de Fundas</h2>
-            <a href="subir-producto.php">Agregar funda +</a>
-            <section>
+            <a href="subir-producto.php" class="boton-agregar">Agregar funda +</a>
+            <section class="tarjetas-productos">
                 <article>
-                    <h3>Funda Uso Rudo Shockproof</h3>
-                    <p>Categoría: Uso Rudo</p>
-                    <p>Precio: $250.00</p>
-                    <a href="funda-detalle.php?id=1">Ver detalle</a>
+                    <img src="https://placehold.co/200X150" alt="Detalle de foto">
+                    <div class="tarjeta-producto-info">
+                        <h3>Funda Uso Rudo Shockproof</h3>
+                        <p class="etiqueta-categoria">Categoría: Uso Rudo</p>
+                        <p class="texto-secundario">Texto secundario o de detalle de producto</p>
+                        <p class="tarjeta-producto-precio">Precio: $250.00</p>
+                        <a class="enlace-detalle" href="funda-detalle.php?id=1">Ver detalle</a>
+                    </div>
                 </article>
 
                 <article>
-                    <h3>Funda de Silicón Suave Matte</h3>
-                    <p>Categoría: Silicón</p>
-                    <p>Precio: $180.00</p>
-                    <a href="funda-detalle.php?id=2">Ver detalle</a>
+                    <img src="https://placehold.co/200X150" alt="Detalle de foto">
+                    <div class="tarjeta-producto-info">
+                        <h3>Funda de Silicón Suave Matte</h3>
+                        <p class="etiqueta-categoria">Categoría: Silicón</p>
+                        <p class="texto-secundario">Texto secundario o de detalle de producto</p>
+                        <p class="tarjeta-producto-precio">Precio: $180.00</p>
+                        <a class="enlace-detalle" href="funda-detalle.php?id=2">Ver detalle</a>
+                    </div>
                 </article>
 
                 <article>
-                    <h3>Funda Transparente MagSafe</h3>
-                    <p>Categoría: Transparente</p>
-                    <p>Precio: $300.00</p>
-                    <a href="funda-detalle.php?id=3">Ver detalle</a>
+                    <img src="https://placehold.co/200X150" alt="Detalle de foto">
+                    <div class="tarjeta-producto-info">
+                        <h3>Funda Transparente MagSafe</h3>
+                        <p class="etiqueta-categoria">Categoría: Transsparente</p>
+                        <p class="texto-secundario">Texto secundario o de detalle de producto</p>
+                        <p class="tarjeta-producto-precio">Precio: $300.00</p>
+                        <a class="enlace-detalle" href="funda-detalle.php?id=3">Ver detalle</a>
+                    </div>
                 </article>
             </section>
         </main>

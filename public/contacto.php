@@ -3,14 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>PhonecaSeSDS - Contacto</title>
+        <link rel="stylesheet" href="assets/css/estilos.css">
     </head>
     <body>
         <header>
             <h1>Bienvenido a PhonecaSeSDS</h1>
             <nav>
-                <a href="index.php">Inicio</a>
-                <a href="fundas.php">Catálogo</a>
-                <a href="contacto.php">Contacto</a>
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="fundas.php">Catálogo</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                </ul>
             </nav>
         </header>
 
