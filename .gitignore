@@ -1,0 +1,16 @@
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración personal del editor
+.vscode/
+
+# Variables y datos privados
+.env
+.env.*
+
+# Registros
+*.log
+
+# Dependencias de PHP, si existen
+/vendor/
