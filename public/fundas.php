@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PhonecaSeSDS - Fundas</title>
         <link rel="stylesheet" href="assets/css/estilos.css">
     </head>
@@ -11,7 +12,7 @@
             <nav>
                 <ul>
                     <li><a href="index.php">Inicio</a></li>
-                    <li><a href="fundas.php">Catálogo</a></li>
+                    <li><a href="fundas.php" aria-current="page">Catálogo</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </nav>
@@ -45,7 +46,7 @@
                     <img src="https://placehold.co/200X150" alt="Detalle de foto">
                     <div class="tarjeta-producto-info">
                         <h3>Funda Transparente MagSafe</h3>
-                        <p class="etiqueta-categoria">Categoría: Transsparente</p>
+                        <p class="etiqueta-categoria">Categoría: Transparente</p>
                         <p class="tarjeta-producto-precio">$300.00</p>
                         <a class="enlace-detalle" href="funda-detalle.php?id=3">Ver detalle</a>
                     </div>
