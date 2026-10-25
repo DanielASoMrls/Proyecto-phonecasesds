@@ -3,6 +3,8 @@
     --color-acento: #c084fc;
     --color-texto: #252033;
     --color-fondo: #f8f5fc;
+    --color-acento: #5b2cbf;
+    --color-error: #b3261e;
     --fuente-base: "Segoe UI", Arial, sans-serif;
     --espaciado-base: 8px;
     --columnas-catalogo: 3;
@@ -51,6 +53,12 @@ nav a {
 nav a:hover {
     background-color: var(--color-acento);
     color: white;
+    text-underline-offset: 4px;
+}
+
+nav a[aria-current]{
+    border-bottom: 3px solid white;
+    padding-bottom: 2px;
 }
 
 
@@ -158,6 +166,77 @@ h3{
     margin: 12px 0 6px 0;
     color: var(--color-texto);
     font-weight: bold;
+}
+
+.campo{
+    margin-bottom: calc(var(--espaciado-base)*2);
+}
+
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+input{
+    width: 100%;
+    max-width: 420px;
+    padding: var(--espaciado-base);
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    font: inherit;
+}
+
+input:user-invalid{
+    border-color:var(--color-error);
+}
+
+.ayuda-campo{
+    font-size: 0.875 rem;
+    margin: 4px 0 0;
+}
+
+.error-campo{
+    display: none;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--color-error);
+    margin: 4px 0 0;
+}
+
+input:user-invalid ~ .error-campo{
+    display: block;
+}
+
+.boton-agregar,button[type="submit"]{
+    display: block;
+    padding: calc(var(--espaciado-base) * 1.5) calc(var(--espaciado-base)* 2);
+    background-color: var(--color-acento);
+    color: white;
+    font: inherit;
+    font-weight:bold;
+    text-decoration: none;
+    border: 0;
+    border-radius:4px;
+    cursor: pointer;
+}
+
+.migas ol{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-base);
+    margin: calc(var(--espaciado-base) * 2) 0;
+    padding: 0;
+}
+
+.migas a{
+    color: var(--color-acento);
+}
+
+.migas li + li::before{
+    content: "/";
+    margin-right: var(--espaciado-base);
 }
 
 footer{
