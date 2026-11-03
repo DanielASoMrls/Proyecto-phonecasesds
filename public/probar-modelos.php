@@ -1,26 +1,12 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ .'/../src/modelos/Categoria.php';
-require_once __DIR__ .'/../src/modelos/Producto.php';
+require_once __DIR__ . '/../src/datos/RepositorioFundas.php';
 
-$piel = new Categoria('Piel');
-$estampados = new Categoria('Estampados');
+$repositorio = new RepositorioFundas(__DIR__ . '/../datos/datos.json');
+$productos = $repositorio->obtenerTodos();
 
-echo $piel->obtenerNombre().'<br>';
-echo $estampados->obtenerNombre().'<br>-----------------------------<br>';
-
-#$intento =new Producto(1, 'Funda De Piel Modern', new Categoria('Piel'), 999.00,100,'iPhone 16 Pro');
-
-$piel = Producto::desdeArreglo([
-    'id'=> 1,
-    'nombreProducto'=> 'Funda De Piel Modern',
-    'categoria'=> 'Piel',
-    'precio'=> 999.00,
-    'stock'=> 100,
-    'modeloCompatible'=> 'iPhone 16 Pro'
-]);
-
-echo $piel->obtenerNombre().'('.$piel->obtenerCategoria()->obtenerNombre().') y cuesta '.$piel->obtenerPrecioFormatear().'<br>';
-echo $piel->estaDisponible() ? 'Existe producto' : 'Agotado';
-?>
+echo '<pre>';
+echo 'Registros leidos: ' . count($productos) . "\n";
+echo 'Primer nombre: ' . $productos[0]['nombreProducto'] . "\n";
+echo '</pre>';

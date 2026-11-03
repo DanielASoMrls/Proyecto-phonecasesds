@@ -38,5 +38,13 @@
     "precio": 210,
     "stock": 12,
     "modeloCompatible": "Motorola G54"
+  },
+  {
+    "id": 6,
+    "nombreProducto": "Funda Transparente color rosa",
+    "categoria": "Transparente",
+    "precio": 185,
+    "stock": 0,
+    "modeloCompatible": "IPhone 17 Pro"
   }
 ]
