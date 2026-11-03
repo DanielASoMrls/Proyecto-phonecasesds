@@ -12,12 +12,12 @@ class RepositorioFundas
         $this->rutaArchivo = $rutaArchivo;
     }
 
-    // Paso temporal: todavía devuelve arreglos. En 2.2 devolverá objetos.
+    /** @return Producto[] */
     public function obtenerTodos(): array
     {
-        return $this->leerRegistros();
+        return $this->convertirAProductos($this->leerRegistros());
     }
-
+    
     private function leerRegistros(): array
     {
         if (!is_file($this->rutaArchivo)) {
@@ -32,5 +32,14 @@ class RepositorioFundas
         }
 
         return $registros;
+    }
+
+    /** @return Producto[] */
+    private function convertirAProductos(array $registros): array
+    {
+        return array_map(
+            fn (array $registro) => Producto::desdeArreglo($registro),
+            $registros
+        );
     }
 }

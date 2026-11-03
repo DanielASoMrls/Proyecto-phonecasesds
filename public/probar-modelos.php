@@ -7,6 +7,9 @@ $repositorio = new RepositorioFundas(__DIR__ . '/../datos/datos.json');
 $productos = $repositorio->obtenerTodos();
 
 echo '<pre>';
-echo 'Registros leidos: ' . count($productos) . "\n";
-echo 'Primer nombre: ' . $productos[0]['nombreProducto'] . "\n";
+foreach ($repositorio->obtenerTodos() as $producto) {
+    echo $producto->obtenerId() . ' | '
+        . $producto->obtenerNombre() . ' | '
+        . $producto->obtenerPrecioFormatear() . "\n";
+}
 echo '</pre>';
