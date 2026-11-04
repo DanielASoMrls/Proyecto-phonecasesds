@@ -1,3 +1,13 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../src/datos/RepositorioFundas.php';
+require_once __DIR__ . '/../src/utilidades/vistas.php';
+
+$repositorio = new RepositorioFundas(__DIR__ . '/../datos/datos.json');
+$destacados = array_slice($repositorio->obtenerTodos(), 0, 3);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -24,6 +34,12 @@
                 <h2>Fundas en tendencia</h2>
                 <p>Encuentra las mejores fundas para tu celular en PhonecaSeSDS</p>
             </section>
+            <section class="tarjetas-productos">
+                <?php foreach ($destacados as $producto): ?>
+                    <?php mostrarTarjetaProducto($producto, 3); ?>
+                <?php endforeach; ?>
+            </section>
+            
         </main>
 
         <footer>

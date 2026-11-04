@@ -1,3 +1,13 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../src/datos/RepositorioFundas.php';
+require_once __DIR__ . '/../src/utilidades/vistas.php';
+
+$repositorio = new RepositorioFundas(__DIR__ . '/../datos/datos.json');
+$productos = $repositorio->obtenerTodos();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -22,35 +32,9 @@
             <h2>Catálogo de Fundas</h2>
             <a href="subir-producto.php" class="boton-agregar">Agregar funda +</a>
             <section class="tarjetas-productos">
-                <article>
-                    <img src="https://placehold.co/200X150" alt="Detalle de foto">
-                    <div class="tarjeta-producto-info">
-                        <h3>Funda Uso Rudo Shockproof</h3>
-                        <p class="etiqueta-categoria">Categoría: Uso Rudo</p>
-                        <p class="tarjeta-producto-precio">$250.00</p>
-                        <a class="enlace-detalle" href="funda-detalle.php?id=1">Ver detalle</a>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="https://placehold.co/200X150" alt="Detalle de foto">
-                    <div class="tarjeta-producto-info">
-                        <h3>Funda de Silicón Suave Matte</h3>
-                        <p class="etiqueta-categoria">Categoría: Silicón</p>
-                        <p class="tarjeta-producto-precio">$180.00</p>
-                        <a class="enlace-detalle" href="funda-detalle.php?id=2">Ver detalle</a>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="https://placehold.co/200X150" alt="Detalle de foto">
-                    <div class="tarjeta-producto-info">
-                        <h3>Funda Transparente MagSafe</h3>
-                        <p class="etiqueta-categoria">Categoría: Transparente</p>
-                        <p class="tarjeta-producto-precio">$300.00</p>
-                        <a class="enlace-detalle" href="funda-detalle.php?id=3">Ver detalle</a>
-                    </div>
-                </article>
+                <?php foreach ($productos as $producto): ?>
+                    <?php mostrarTarjetaProducto($producto); ?>
+                <?php endforeach; ?>
             </section>
         </main>
 

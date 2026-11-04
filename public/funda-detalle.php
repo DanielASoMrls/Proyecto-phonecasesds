@@ -1,3 +1,21 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../src/datos/RepositorioFundas.php';
+require_once __DIR__ . '/../src/utilidades/vistas.php';
+
+$repositorio = new RepositorioFundas(__DIR__ . '/../datos/datos.json');
+$idSolicitado = (int) filter_var($_GET['id'] ?? '', FILTER_VALIDATE_INT);
+
+$productoEncontrado = true;
+try {
+    $producto = $repositorio->buscarPorId($idSolicitado);
+} catch (OutOfBoundsException $error) {
+    $productoEncontrado = false;
+    http_response_code(404);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -19,18 +37,31 @@
         </header>
 
         <main>
-            <nav class="migas" aria-label="Ruta de navegación">
-                <ol>
-                    <li><a href="index.php">Inicio</a> </li>
-                    <li><a href="productos.php">Catálogo</a> </li>
-                    <li aria-current="page">Funda Uso Rudo Shockproof</li>
-                </ol>
-            </nav>
-            <article>
-                <h3>Funda Uso Rudo Shockproof</h3>
-                <p>Categoría: Uso Rudo</p>
-                <p>Precio: $250.00</p>
-            </article>
+            <?php if ($productoEncontrado): ?>
+
+                <nav class="migas" aria-label="Ruta de navegación">
+                    <ol>
+                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="fundas.php">Catálogo</a></li>
+                        <li aria-current="page"><?= escapar($producto->obtenerNombre()) ?></li>
+                    </ol>
+                </nav>
+
+                <article>
+                    <h3><?= escapar($producto->obtenerNombre()) ?></h3>
+                    <p>Categoría: <?= escapar($producto->obtenerCategoria()->obtenerNombre()) ?></p>
+                    <p>Precio: <?= $producto->obtenerPrecioFormatear() ?></p>
+
+                    <?php mostrarDisponibilidad($producto); ?>
+                </article>
+
+            <?php else: ?>
+
+                <h1>Producto no encontrado</h1>
+                <p>La funda que buscas no existe o ya no está disponible.</p>
+                <a href="fundas.php">Volver al catálogo</a>
+
+            <?php endif; ?>
         </main>
 
         <footer>

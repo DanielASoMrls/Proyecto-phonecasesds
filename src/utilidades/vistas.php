@@ -16,13 +16,13 @@ function mostrarTarjetaProducto(Producto $producto, int $nivelTitulo = 2): void
     $categoria = escapar($producto->obtenerCategoria()->obtenerNombre());
     ?>
     <article>
-        <img src="<?= escapar($producto->obtenerImagen()) ?>" alt="Foto de <?= $nombre ?>">
+        <img src="https://placehold.co/200X150" alt="Detalle de foto">
         <div class="tarjeta-producto-info">
             <<?= $titulo ?>><?= $nombre ?></<?= $titulo ?>>
             <p class="etiqueta-categoria">Categoría: <?= $categoria ?></p>
             <p class="tarjeta-producto-precio">Precio: <?= $producto->obtenerPrecioFormatear() ?></p>
             <?php mostrarDisponibilidad($producto); ?>
-            <a class="enlace-detalle" href="funda-detalle.php?id=<?= $producto->obtenerId() ?>">Ver detalle de <?= $nombre ?></a>
+            <a class="enlace-detalle" href="funda-detalle.php?id=<?= $producto->obtenerId() ?>">Ver detalle</a>
         </div>
     </article>
     <?php

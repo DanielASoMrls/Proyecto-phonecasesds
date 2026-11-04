@@ -1,3 +1,13 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../src/datos/RepositorioFundas.php';
+require_once __DIR__ . '/../src/utilidades/vistas.php';
+
+$repositorio = new RepositorioFundas(__DIR__ . '/../datos/datos.json');
+$productos = $repositorio->obtenerTodos();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
