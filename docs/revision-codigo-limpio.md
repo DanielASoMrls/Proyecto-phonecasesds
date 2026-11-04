@@ -1,0 +1,4 @@
+#	Principio	Qué encontré
+1	Nombres (cap. 2)	RepositorioFundas.php: clase RepositorioFundas y métodos obtenerTodos() y buscarPorId().	Utilicé nombres descriptivos en español para identificar fácilmente la función de cada método y clase.	
+2	Funciones pequeñas (cap. 3)	RepositorioFundas.php: métodos leerRegistros() y convertirAProductos(). También vistas.php: escapar(), mostrarTarjetaProducto() y mostrarDisponibilidad().	Separé las responsabilidades en funciones más pequeñas para facilitar la lectura y evitar concentrar todo el código en una sola función.
+3	Objetos (cap. 6)	Producto.php: clase Producto y método desdeArreglo().	Utilicé objetos para representar las fundas y sus características, agrupando sus datos y comportamientos dentro de la clase.
