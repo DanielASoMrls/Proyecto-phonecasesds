@@ -5,9 +5,10 @@ Thumbs.db
 # Configuración personal del editor
 .vscode/
 
-# Variables y datos privados
+# Variables, credenciales y herramientas de acceso a datos privados
 .env
 .env.*
+dev/adminer.php
 
 # Registros
 *.log
